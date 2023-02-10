@@ -1,4 +1,4 @@
-import 'dart:math';
+// ignore: file_names
 
 import 'package:flutter/material.dart';
 
@@ -19,13 +19,10 @@ class _HomeState extends State<Homepage> {
     "assets/images/5.jpg",
     "assets/images/10.jpg",
     "assets/images/12.jpg",
-    "assets/images/8.jpg",
-    "assets/images/2.jpg",
     "assets/images/13.jpg",
+    "assets/images/2.jpg",
+    "assets/images/8.jpg",
     "assets/images/1.jpg",
-
-
-
   ];
   List item = [
     "SHOES",
@@ -76,22 +73,23 @@ class _HomeState extends State<Homepage> {
       child: Scaffold(
         backgroundColor: Colors.grey,
         appBar: AppBar(
-          title: Text("SHOPPING GALLERY UI"),
+          title: const Text("SHOPPING GALLERY UI"),
           centerTitle: true,
-          backgroundColor: Colors.indigo.shade400,
+          backgroundColor: Colors.blueGrey.shade900,
         ),
         body: Container(
           decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-                Colors.grey.shade300,
-                Colors.white
-              ],transform: GradientRotation(pi/2))
+            color: Colors.blueGrey.shade300,
+              // gradient: LinearGradient(colors: [
+              //   Colors.grey.shade300,
+              //   Colors.white
+              // ],transform: GradientRotation(pi/2))
           ),
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: GridView.builder(
               itemCount: image.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
@@ -105,20 +103,20 @@ class _HomeState extends State<Homepage> {
       ),
     );
   }
-
+  // ignore: non_constant_identifier_names
   Widget Box(String image, String item, String price, String rate) {
     return Stack(
       children: [
         Container(
           height: 500,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(Radius.circular(20)),
           ),
           alignment: Alignment.center,
           child: Image.asset(
-            "$image",
+            image,
             height: 155,
             width: 155,
           ),
@@ -128,12 +126,8 @@ class _HomeState extends State<Homepage> {
           child: Container(
             height: 28,
             width: 62,
-            decoration: BoxDecoration(
-              color: Colors.green.shade700,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15),
-                bottomRight: Radius.circular(10),
-              ),
+            decoration: const BoxDecoration(
+
             ),
             alignment: Alignment.center,
             child: Row(
@@ -141,9 +135,9 @@ class _HomeState extends State<Homepage> {
               children: [
                 Text(
                   "$rate ",
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
-                Icon(
+                const Icon(
                   Icons.star,
                   size: 15,
                   color: Colors.white,
@@ -155,7 +149,7 @@ class _HomeState extends State<Homepage> {
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Colors.black54,
                 borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(15),
@@ -169,12 +163,12 @@ class _HomeState extends State<Homepage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "$item",
-                    style: TextStyle(color: Colors.white),
+                    item,
+                    style: const TextStyle(color: Colors.white),
                   ),
                   Text(
                     "\$ $price",
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                 ],
               ),
