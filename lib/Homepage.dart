@@ -27,7 +27,7 @@ class _HomeState extends State<Homepage> {
   List item = [
     "SHOES",
     "TSHIRT",
-    "TOP",
+    "TOP", 
     "BLAZER",
     "HODE",
     "JEANS",
